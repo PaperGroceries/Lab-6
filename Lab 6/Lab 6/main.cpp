@@ -14,7 +14,7 @@ void display();
 
 int main() {
     // insert code here...
-   // int x;
+    int numbering;
     const int ROWS = 4;
     int COLUMNS_PER_ROW_ARR [ROWS] = {5,6,4,3};
     int **arr = new int *[ROWS];
@@ -68,10 +68,13 @@ int main() {
                     // simulate a login operation
                     arr[lab - 1][machine - 1] = user_id;
                    // display(ROWS, COLUMNS_PER_ROW_ARR,**arr );
+                    cout << "Lab Number " << "Computer Stations" << endl;
                     for (int i = 0; i <ROWS; i++)
                     {
+                        cout << i + 1 << "          ";
                         for (int j = 0; j < COLUMNS_PER_ROW_ARR[i]; j++)
                         {
+                            cout << j + 1 << ": ";
                             if ( arr[i][j] == 0)
                             {
                                 cout << "empty " ;
@@ -94,10 +97,13 @@ int main() {
                         cin >> lab >> machine;
                         arr[lab - 1][machine - 1] = 0;
                         
+                        cout << "Lab Number " << "Computer Stations" << endl;
                         for (int i = 0; i <ROWS; i++)
                         {
+                            cout << i + 1 << "          ";
                             for (int j = 0; j < COLUMNS_PER_ROW_ARR[i]; j++)
                             {
+                                cout << j + 1 << ": ";
                                 if ( arr[i][j] == 0)
                                 {
                                     cout << "empty " ;
@@ -134,7 +140,7 @@ int main() {
 
                                     
                                 }
-                                         cout << endl;
+                                        
                                      }
                             if (!user_found)
                             {
