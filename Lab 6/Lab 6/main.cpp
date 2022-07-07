@@ -51,7 +51,7 @@ int main() {
                 cout << "1 - Login " << endl;
                 cout << "2- Log off " << endl;
                 cout << "3- Search" << endl;
-                cout << "4- Exist" << endl;
+                cout << "4- Exit" << endl;
         
         cin >> selection;
                 switch (selection)
@@ -85,7 +85,60 @@ int main() {
                     
                     break;
                 }
-                   
+                    case 2:
+                    {
+                        int machine = 0;
+                        int lab = 0;
+                        cout << "enter lab, & machine " << endl;
+                        cin >> lab >> machine;
+                        arr[lab - 1][machine - 1] = 0;
+                        
+                        for (int i = 0; i <ROWS; i++)
+                        {
+                            for (int j = 0; j < COLUMNS_PER_ROW_ARR[i]; j++)
+                            {
+                                if ( arr[i][j] == 0)
+                                {
+                                    cout << "empty " ;
+                                }
+                                else{
+                                    cout << arr[i][j] << " ";
+
+                                }
+                                                          }
+                                     cout << endl;
+                                 }
+                    }
+                    case 3:
+                        {
+                            int user_id = 49193;
+                            int machine = 2;
+                            int lab = 3;
+                            bool user_found = false;
+                            cout << "enter id " << endl;
+                            cin >> user_id;
+                            for (int i = 0; i <ROWS; i++)
+                            {
+                                for (int j = 0; j < COLUMNS_PER_ROW_ARR[i]; j++)
+                                {
+                                    if ( arr[i][j] == user_id)
+                                    {
+                                        cout << "lab: " << i +1 << endl << "computer station #" << j+1 <<endl;
+                                        lab = i + 1;
+                                        machine = j + 1;
+                                        user_found = true;
+                                        
+                                    }
+                                   
+
+                                    
+                                }
+                                         cout << endl;
+                                     }
+                            if (!user_found)
+                            {
+                                cout << "None" << endl;
+                            }
                             
                         }
                         
@@ -93,7 +146,7 @@ int main() {
                 break;
                         
     }
-    }while (selection != -4);
+    }while (selection != 4);
     
     
 //    int *p = new int;
