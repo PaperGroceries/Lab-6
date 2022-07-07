@@ -23,6 +23,7 @@ int main() {
     arr[1] = new int [6];
     arr[2] = new int [4];
     arr[3] = new int [3];
+   
     // initialize everthng to -1 or 0
     
     
@@ -152,11 +153,13 @@ int main() {
 //    int *p = new int;
 //    *p = 5;
 //
-    delete arr[0];
-    delete arr[1];
-    delete arr[2];
-    delete arr[3];
-    delete *arr;
+
+   
+    delete [] arr[0];
+    delete [] arr[1];
+    delete [] arr[2];
+    delete [] arr[3];
+    delete [] arr;
    
     
     //check memory leak
