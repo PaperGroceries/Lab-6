@@ -7,8 +7,125 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
+
+using namespace std;
+
+void display();
+
+int main() {
     // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+   // int x;
+    const int ROWS = 4;
+    int COLUMNS_PER_ROW_ARR [ROWS] = {5,6,4,3};
+    int **arr = new int *[ROWS];
+    
+    arr[0] = new int [5];
+    arr[1] = new int [6];
+    arr[2] = new int [4];
+    arr[3] = new int [3];
+    // initialize everthng to -1 or 0
+    
+    
+    for (int i = 0; i <ROWS; i++)
+    {
+        for (int j = 0; j < COLUMNS_PER_ROW_ARR[i]; j++)
+        {
+             arr[i][j] = 0 ;
+                 }
+             }
+
+//
+//    int user_id ;
+//    int machine ;
+//    int lab ;
+    
+    //somulate login operation
+   
+    
+    int selection = -7;
+    
+   
+
+    do{
+        cout << "choose one of the following" << endl;
+                cout << "1 - Login " << endl;
+                cout << "2- Log off " << endl;
+                cout << "3- Search" << endl;
+                cout << "4- Exist" << endl;
+        
+        cin >> selection;
+                switch (selection)
+                {
+                case 1:
+                {
+
+                    int user_id = 49193;
+                    int machine = 2;
+                    int lab = 3;
+                    cout << "enter id, lab, & machine " << endl;
+                    cin >> user_id >> lab >> machine;
+                    // simulate a login operation
+                    arr[lab - 1][machine - 1] = user_id;
+                   // display(ROWS, COLUMNS_PER_ROW_ARR,**arr );
+                    for (int i = 0; i <ROWS; i++)
+                    {
+                        for (int j = 0; j < COLUMNS_PER_ROW_ARR[i]; j++)
+                        {
+                            if ( arr[i][j] == 0)
+                            {
+                                cout << "empty " ;
+                            }
+                            else{
+                                cout << arr[i][j] << " ";
+
+                            }
+                                                      }
+                                 cout << endl;
+                             }
+                    
+                    break;
+                }
+                   
+                            
+                        }
+                        
+                default:
+                break;
+                        
+    }
+    }while (selection != -4);
+    
+    
+//    int *p = new int;
+//    *p = 5;
+//
+    delete arr[0];
+    delete arr[1];
+    delete arr[2];
+    delete arr[3];
+    delete *arr;
+   
+    
+    //check memory leak
+    //12:50-57
+
+}
+
+void display(int ROWS, int COLUMNS_PER_ROW_ARR[], int **arr  )
+{
+    for (int i = 0; i <ROWS; i++)
+    {
+        for (int j = 0; j < COLUMNS_PER_ROW_ARR[i]; j++)
+        {
+            if ( arr[i][j] == 0)
+            {
+                cout << "empty " ;
+            }
+            else{
+                cout << arr[i][j] << " ";
+
+            }
+                                      }
+                 cout << endl;
+             }
 }
