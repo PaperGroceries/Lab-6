@@ -115,6 +115,7 @@ int main() {
                                                           }
                                      cout << endl;
                                  }
+                        break;
                     }
                     case 3:
                         {
