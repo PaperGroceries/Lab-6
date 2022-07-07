@@ -1,0 +1,65 @@
+choose one of the following
+1 - Login 
+2- Log off 
+3- Search
+4- Exit
+1
+enter id, lab, & machine 
+12345 3 4
+Lab Number Computer Stations
+1          1: empty 2: empty 3: empty 4: empty 5: empty 
+2          1: empty 2: empty 3: empty 4: empty 5: empty 6: empty 
+3          1: empty 2: empty 3: empty 4: 12345 
+4          1: empty 2: empty 3: empty 
+choose one of the following
+1 - Login 
+2- Log off 
+3- Search
+4- Exit
+1
+enter id, lab, & machine 
+54321 2 3
+Lab Number Computer Stations
+1          1: empty 2: empty 3: empty 4: empty 5: empty 
+2          1: empty 2: empty 3: 54321 4: empty 5: empty 6: empty 
+3          1: empty 2: empty 3: empty 4: 12345 
+4          1: empty 2: empty 3: empty 
+choose one of the following
+1 - Login 
+2- Log off 
+3- Search
+4- Exit
+2
+enter lab, & machine 
+2 3
+Lab Number Computer Stations
+1          1: empty 2: empty 3: empty 4: empty 5: empty 
+2          1: empty 2: empty 3: empty 4: empty 5: empty 6: empty 
+3          1: empty 2: empty 3: empty 4: 12345 
+4          1: empty 2: empty 3: empty 
+choose one of the following
+1 - Login 
+2- Log off 
+3- Search
+4- Exit
+3
+enter id 
+54321
+None
+choose one of the following
+1 - Login 
+2- Log off 
+3- Search
+4- Exit
+3
+enter id 
+12345
+lab: 3
+computer station #4
+choose one of the following
+1 - Login 
+2- Log off 
+3- Search
+4- Exit
+4
+Program ended with exit code: 0
